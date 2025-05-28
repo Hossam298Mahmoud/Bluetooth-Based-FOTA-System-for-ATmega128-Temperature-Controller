@@ -1,0 +1,1379 @@
+
+Boot.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000408  00800100  0001e6f8  0000078c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000006f8  0001e000  0001e000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800508  00800508  00000b94  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000b94  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000bc4  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000148  00000000  00000000  00000c00  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001982  00000000  00000000  00000d48  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000c09  00000000  00000000  000026ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000cca  00000000  00000000  000032d3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000218  00000000  00000000  00003fa0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005dc  00000000  00000000  000041b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000d17  00000000  00000000  00004794  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000c8  00000000  00000000  000054ab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+0001e000 <__vectors>:
+   1e000:	45 c0       	rjmp	.+138    	; 0x1e08c <__ctors_end>
+   1e002:	00 00       	nop
+   1e004:	60 c0       	rjmp	.+192    	; 0x1e0c6 <__bad_interrupt>
+   1e006:	00 00       	nop
+   1e008:	5e c0       	rjmp	.+188    	; 0x1e0c6 <__bad_interrupt>
+   1e00a:	00 00       	nop
+   1e00c:	5c c0       	rjmp	.+184    	; 0x1e0c6 <__bad_interrupt>
+   1e00e:	00 00       	nop
+   1e010:	5a c0       	rjmp	.+180    	; 0x1e0c6 <__bad_interrupt>
+   1e012:	00 00       	nop
+   1e014:	58 c0       	rjmp	.+176    	; 0x1e0c6 <__bad_interrupt>
+   1e016:	00 00       	nop
+   1e018:	56 c0       	rjmp	.+172    	; 0x1e0c6 <__bad_interrupt>
+   1e01a:	00 00       	nop
+   1e01c:	54 c0       	rjmp	.+168    	; 0x1e0c6 <__bad_interrupt>
+   1e01e:	00 00       	nop
+   1e020:	52 c0       	rjmp	.+164    	; 0x1e0c6 <__bad_interrupt>
+   1e022:	00 00       	nop
+   1e024:	50 c0       	rjmp	.+160    	; 0x1e0c6 <__bad_interrupt>
+   1e026:	00 00       	nop
+   1e028:	4e c0       	rjmp	.+156    	; 0x1e0c6 <__bad_interrupt>
+   1e02a:	00 00       	nop
+   1e02c:	4c c0       	rjmp	.+152    	; 0x1e0c6 <__bad_interrupt>
+   1e02e:	00 00       	nop
+   1e030:	4a c0       	rjmp	.+148    	; 0x1e0c6 <__bad_interrupt>
+   1e032:	00 00       	nop
+   1e034:	48 c0       	rjmp	.+144    	; 0x1e0c6 <__bad_interrupt>
+   1e036:	00 00       	nop
+   1e038:	46 c0       	rjmp	.+140    	; 0x1e0c6 <__bad_interrupt>
+   1e03a:	00 00       	nop
+   1e03c:	44 c0       	rjmp	.+136    	; 0x1e0c6 <__bad_interrupt>
+   1e03e:	00 00       	nop
+   1e040:	42 c0       	rjmp	.+132    	; 0x1e0c6 <__bad_interrupt>
+   1e042:	00 00       	nop
+   1e044:	40 c0       	rjmp	.+128    	; 0x1e0c6 <__bad_interrupt>
+   1e046:	00 00       	nop
+   1e048:	3e c0       	rjmp	.+124    	; 0x1e0c6 <__bad_interrupt>
+   1e04a:	00 00       	nop
+   1e04c:	3c c0       	rjmp	.+120    	; 0x1e0c6 <__bad_interrupt>
+   1e04e:	00 00       	nop
+   1e050:	3a c0       	rjmp	.+116    	; 0x1e0c6 <__bad_interrupt>
+   1e052:	00 00       	nop
+   1e054:	38 c0       	rjmp	.+112    	; 0x1e0c6 <__bad_interrupt>
+   1e056:	00 00       	nop
+   1e058:	36 c0       	rjmp	.+108    	; 0x1e0c6 <__bad_interrupt>
+   1e05a:	00 00       	nop
+   1e05c:	34 c0       	rjmp	.+104    	; 0x1e0c6 <__bad_interrupt>
+   1e05e:	00 00       	nop
+   1e060:	32 c0       	rjmp	.+100    	; 0x1e0c6 <__bad_interrupt>
+   1e062:	00 00       	nop
+   1e064:	30 c0       	rjmp	.+96     	; 0x1e0c6 <__bad_interrupt>
+   1e066:	00 00       	nop
+   1e068:	2e c0       	rjmp	.+92     	; 0x1e0c6 <__bad_interrupt>
+   1e06a:	00 00       	nop
+   1e06c:	2c c0       	rjmp	.+88     	; 0x1e0c6 <__bad_interrupt>
+   1e06e:	00 00       	nop
+   1e070:	2a c0       	rjmp	.+84     	; 0x1e0c6 <__bad_interrupt>
+   1e072:	00 00       	nop
+   1e074:	28 c0       	rjmp	.+80     	; 0x1e0c6 <__bad_interrupt>
+   1e076:	00 00       	nop
+   1e078:	26 c0       	rjmp	.+76     	; 0x1e0c6 <__bad_interrupt>
+   1e07a:	00 00       	nop
+   1e07c:	24 c0       	rjmp	.+72     	; 0x1e0c6 <__bad_interrupt>
+   1e07e:	00 00       	nop
+   1e080:	22 c0       	rjmp	.+68     	; 0x1e0c6 <__bad_interrupt>
+   1e082:	00 00       	nop
+   1e084:	20 c0       	rjmp	.+64     	; 0x1e0c6 <__bad_interrupt>
+   1e086:	00 00       	nop
+   1e088:	1e c0       	rjmp	.+60     	; 0x1e0c6 <__bad_interrupt>
+	...
+
+0001e08c <__ctors_end>:
+   1e08c:	11 24       	eor	r1, r1
+   1e08e:	1f be       	out	0x3f, r1	; 63
+   1e090:	cf ef       	ldi	r28, 0xFF	; 255
+   1e092:	d0 e1       	ldi	r29, 0x10	; 16
+   1e094:	de bf       	out	0x3e, r29	; 62
+   1e096:	cd bf       	out	0x3d, r28	; 61
+
+0001e098 <__do_copy_data>:
+   1e098:	15 e0       	ldi	r17, 0x05	; 5
+   1e09a:	a0 e0       	ldi	r26, 0x00	; 0
+   1e09c:	b1 e0       	ldi	r27, 0x01	; 1
+   1e09e:	e8 ef       	ldi	r30, 0xF8	; 248
+   1e0a0:	f6 ee       	ldi	r31, 0xE6	; 230
+   1e0a2:	01 e0       	ldi	r16, 0x01	; 1
+   1e0a4:	0b bf       	out	0x3b, r16	; 59
+   1e0a6:	02 c0       	rjmp	.+4      	; 0x1e0ac <__do_copy_data+0x14>
+   1e0a8:	07 90       	elpm	r0, Z+
+   1e0aa:	0d 92       	st	X+, r0
+   1e0ac:	a8 30       	cpi	r26, 0x08	; 8
+   1e0ae:	b1 07       	cpc	r27, r17
+   1e0b0:	d9 f7       	brne	.-10     	; 0x1e0a8 <__do_copy_data+0x10>
+
+0001e0b2 <__do_clear_bss>:
+   1e0b2:	25 e0       	ldi	r18, 0x05	; 5
+   1e0b4:	a8 e0       	ldi	r26, 0x08	; 8
+   1e0b6:	b5 e0       	ldi	r27, 0x05	; 5
+   1e0b8:	01 c0       	rjmp	.+2      	; 0x1e0bc <.do_clear_bss_start>
+
+0001e0ba <.do_clear_bss_loop>:
+   1e0ba:	1d 92       	st	X+, r1
+
+0001e0bc <.do_clear_bss_start>:
+   1e0bc:	ab 30       	cpi	r26, 0x0B	; 11
+   1e0be:	b2 07       	cpc	r27, r18
+   1e0c0:	e1 f7       	brne	.-8      	; 0x1e0ba <.do_clear_bss_loop>
+   1e0c2:	02 d2       	rcall	.+1028   	; 0x1e4c8 <main>
+   1e0c4:	17 c3       	rjmp	.+1582   	; 0x1e6f4 <_exit>
+
+0001e0c6 <__bad_interrupt>:
+   1e0c6:	9c cf       	rjmp	.-200    	; 0x1e000 <__vectors>
+
+0001e0c8 <LCD_Command>:
+
+/****************** FUNCTION TO SEND A COMMAND TO LCD *************/
+
+void LCD_Command(unsigned char cmd)
+{
+	LCD_Data_Port=((LCD_Data_Port & 0x0F) | (cmd & 0xF0));/* Sending upper nibble */
+   1e0c8:	98 b3       	in	r25, 0x18	; 24
+   1e0ca:	9f 70       	andi	r25, 0x0F	; 15
+   1e0cc:	28 2f       	mov	r18, r24
+   1e0ce:	20 7f       	andi	r18, 0xF0	; 240
+   1e0d0:	92 2b       	or	r25, r18
+   1e0d2:	98 bb       	out	0x18, r25	; 24
+	LCD_Command_Port  &= ~(1<<RS);	/* RS=0 command reg. */
+   1e0d4:	c2 98       	cbi	0x18, 2	; 24
+	//LCD_Command_Port  &= ~(1<<RW);	/* RW=0 Write operation */
+	LCD_Command_Port  |= (1<<EN);	/* Enable pulse */
+   1e0d6:	c3 9a       	sbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e0d8:	00 00       	nop
+	_delay_us(1);
+	LCD_Command_Port  &= ~(1<<EN);
+   1e0da:	c3 98       	cbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e0dc:	e3 ef       	ldi	r30, 0xF3	; 243
+   1e0de:	f1 e0       	ldi	r31, 0x01	; 1
+   1e0e0:	31 97       	sbiw	r30, 0x01	; 1
+   1e0e2:	f1 f7       	brne	.-4      	; 0x1e0e0 <LCD_Command+0x18>
+   1e0e4:	00 c0       	rjmp	.+0      	; 0x1e0e6 <LCD_Command+0x1e>
+   1e0e6:	00 00       	nop
+	_delay_ms(2); //Wait
+	LCD_Data_Port=((LCD_Data_Port & 0x0F) | (cmd<<4));/* Sending lower nibble */
+   1e0e8:	28 b3       	in	r18, 0x18	; 24
+   1e0ea:	2f 70       	andi	r18, 0x0F	; 15
+   1e0ec:	f0 e1       	ldi	r31, 0x10	; 16
+   1e0ee:	8f 9f       	mul	r24, r31
+   1e0f0:	c0 01       	movw	r24, r0
+   1e0f2:	11 24       	eor	r1, r1
+   1e0f4:	82 2b       	or	r24, r18
+   1e0f6:	88 bb       	out	0x18, r24	; 24
+	LCD_Command_Port  |= (1<<EN);	/* Enable pulse */
+   1e0f8:	c3 9a       	sbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e0fa:	00 00       	nop
+	_delay_us(1);
+	LCD_Command_Port  &= ~(1<<EN);
+   1e0fc:	c3 98       	cbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e0fe:	81 ee       	ldi	r24, 0xE1	; 225
+   1e100:	94 e0       	ldi	r25, 0x04	; 4
+   1e102:	01 97       	sbiw	r24, 0x01	; 1
+   1e104:	f1 f7       	brne	.-4      	; 0x1e102 <LCD_Command+0x3a>
+   1e106:	00 c0       	rjmp	.+0      	; 0x1e108 <LCD_Command+0x40>
+   1e108:	00 00       	nop
+   1e10a:	08 95       	ret
+
+0001e10c <LCD_Init>:
+}
+
+/****************** FUNCTION TO INITIALIZE THE LCD *************/
+void LCD_Init (void)	/* LCD Initialize function */
+{
+	LCD_Command_Dir |= (1<<RS)|(1<<EN);	/* Make LCD command port direction as o/p */
+   1e10c:	87 b3       	in	r24, 0x17	; 23
+   1e10e:	8c 60       	ori	r24, 0x0C	; 12
+   1e110:	87 bb       	out	0x17, r24	; 23
+	LCD_Data_Dir = 0xFF;	/* Make LCD data port direction as o/p */
+   1e112:	8f ef       	ldi	r24, 0xFF	; 255
+   1e114:	87 bb       	out	0x17, r24	; 23
+   1e116:	87 e8       	ldi	r24, 0x87	; 135
+   1e118:	93 e1       	ldi	r25, 0x13	; 19
+   1e11a:	01 97       	sbiw	r24, 0x01	; 1
+   1e11c:	f1 f7       	brne	.-4      	; 0x1e11a <LCD_Init+0xe>
+   1e11e:	00 c0       	rjmp	.+0      	; 0x1e120 <LCD_Init+0x14>
+   1e120:	00 00       	nop
+    
+	_delay_ms(20);		/* LCD Power ON delay always >15ms */
+	LCD_Command_Port  &= ~(1<<EN);
+   1e122:	c3 98       	cbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e124:	00 c0       	rjmp	.+0      	; 0x1e126 <LCD_Init+0x1a>
+	_delay_us(2);        //Wait some time to do its Operation
+	LCD_Command(0x33);
+   1e126:	83 e3       	ldi	r24, 0x33	; 51
+   1e128:	cf df       	rcall	.-98     	; 0x1e0c8 <LCD_Command>
+	LCD_Command(0x32);
+   1e12a:	82 e3       	ldi	r24, 0x32	; 50
+   1e12c:	cd df       	rcall	.-102    	; 0x1e0c8 <LCD_Command>
+	LCD_Command (0x28);	/* Initialization of 16X2 LCD in 4bit mode */
+   1e12e:	88 e2       	ldi	r24, 0x28	; 40
+   1e130:	cb df       	rcall	.-106    	; 0x1e0c8 <LCD_Command>
+	LCD_Command (0x01);	/* clear display */
+   1e132:	81 e0       	ldi	r24, 0x01	; 1
+   1e134:	c9 df       	rcall	.-110    	; 0x1e0c8 <LCD_Command>
+	LCD_Command (0x02);	/* cursor at home position */
+   1e136:	82 e0       	ldi	r24, 0x02	; 2
+   1e138:	c7 df       	rcall	.-114    	; 0x1e0c8 <LCD_Command>
+	LCD_Command (0x0E);	/* Display ON Cursor OFF */
+   1e13a:	8e e0       	ldi	r24, 0x0E	; 14
+   1e13c:	c5 df       	rcall	.-118    	; 0x1e0c8 <LCD_Command>
+   1e13e:	86 e0       	ldi	r24, 0x06	; 6
+	LCD_Command (0x06);	/* Auto Increment cursor */
+   1e140:	c3 cf       	rjmp	.-122    	; 0x1e0c8 <LCD_Command>
+
+0001e142 <LCD_Char>:
+   1e142:	98 b3       	in	r25, 0x18	; 24
+   1e144:	9f 70       	andi	r25, 0x0F	; 15
+
+/****************** FUNCTION TO WRITE A CHARACHTER ON LCD *************/
+
+void LCD_Char (unsigned char char_data)	/* LCD data write function */
+{
+	LCD_Data_Port=((LCD_Data_Port & 0x0F) | ( char_data & 0xF0));/* Sending upper nibble */
+   1e146:	28 2f       	mov	r18, r24
+   1e148:	20 7f       	andi	r18, 0xF0	; 240
+   1e14a:	92 2b       	or	r25, r18
+   1e14c:	98 bb       	out	0x18, r25	; 24
+	LCD_Command_Port  |= (1<<RS);	/* RS=1 Data reg. */
+   1e14e:	c2 9a       	sbi	0x18, 2	; 24
+	//LCD_Command_Port  &= ~(1<<RW);	/* RW=0 Write operation */
+	LCD_Command_Port  |= (1<<EN);	/* Enable pulse */
+   1e150:	c3 9a       	sbi	0x18, 3	; 24
+   1e152:	00 00       	nop
+	_delay_us(1);
+	LCD_Command_Port  &= ~(1<<EN);
+   1e154:	c3 98       	cbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e156:	e9 ef       	ldi	r30, 0xF9	; 249
+   1e158:	f0 e0       	ldi	r31, 0x00	; 0
+   1e15a:	31 97       	sbiw	r30, 0x01	; 1
+   1e15c:	f1 f7       	brne	.-4      	; 0x1e15a <LCD_Char+0x18>
+   1e15e:	00 c0       	rjmp	.+0      	; 0x1e160 <LCD_Char+0x1e>
+   1e160:	00 00       	nop
+	_delay_ms(1); //Wait
+	LCD_Data_Port=((LCD_Data_Port & 0x0F) | ( char_data<<4));/* Sending lower nibble */
+   1e162:	28 b3       	in	r18, 0x18	; 24
+   1e164:	2f 70       	andi	r18, 0x0F	; 15
+   1e166:	f0 e1       	ldi	r31, 0x10	; 16
+   1e168:	8f 9f       	mul	r24, r31
+   1e16a:	c0 01       	movw	r24, r0
+   1e16c:	11 24       	eor	r1, r1
+   1e16e:	82 2b       	or	r24, r18
+   1e170:	88 bb       	out	0x18, r24	; 24
+	LCD_Command_Port  |= (1<<EN);	/* Enable pulse */
+   1e172:	c3 9a       	sbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e174:	00 00       	nop
+	_delay_us(1);
+	LCD_Command_Port  &= ~(1<<EN);
+   1e176:	c3 98       	cbi	0x18, 3	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   1e178:	81 ee       	ldi	r24, 0xE1	; 225
+   1e17a:	94 e0       	ldi	r25, 0x04	; 4
+   1e17c:	01 97       	sbiw	r24, 0x01	; 1
+   1e17e:	f1 f7       	brne	.-4      	; 0x1e17c <LCD_Char+0x3a>
+   1e180:	00 c0       	rjmp	.+0      	; 0x1e182 <LCD_Char+0x40>
+   1e182:	00 00       	nop
+   1e184:	08 95       	ret
+
+0001e186 <LCD_String>:
+}
+
+/****************** FUNCTION TO WRITE A STRING ON LCD *************/
+
+void LCD_String (char *str)
+{
+   1e186:	cf 93       	push	r28
+   1e188:	df 93       	push	r29
+   1e18a:	ec 01       	movw	r28, r24
+	for(i=0;str[i]!=0;i++)  /* send each char of string till the NULL */
+   1e18c:	10 92 0a 05 	sts	0x050A, r1	; 0x80050a <i>
+   1e190:	80 91 0a 05 	lds	r24, 0x050A	; 0x80050a <i>
+   1e194:	fe 01       	movw	r30, r28
+   1e196:	e8 0f       	add	r30, r24
+   1e198:	f1 1d       	adc	r31, r1
+   1e19a:	80 81       	ld	r24, Z
+   1e19c:	88 23       	and	r24, r24
+   1e19e:	39 f0       	breq	.+14     	; 0x1e1ae <LCD_String+0x28>
+	{
+		LCD_Char (str[i]);  /* call LCD data write */
+   1e1a0:	d0 df       	rcall	.-96     	; 0x1e142 <LCD_Char>
+
+/****************** FUNCTION TO WRITE A STRING ON LCD *************/
+
+void LCD_String (char *str)
+{
+	for(i=0;str[i]!=0;i++)  /* send each char of string till the NULL */
+   1e1a2:	80 91 0a 05 	lds	r24, 0x050A	; 0x80050a <i>
+   1e1a6:	8f 5f       	subi	r24, 0xFF	; 255
+   1e1a8:	80 93 0a 05 	sts	0x050A, r24	; 0x80050a <i>
+   1e1ac:	f1 cf       	rjmp	.-30     	; 0x1e190 <LCD_String+0xa>
+	{
+		LCD_Char (str[i]);  /* call LCD data write */
+	}
+}
+   1e1ae:	df 91       	pop	r29
+   1e1b0:	cf 91       	pop	r28
+   1e1b2:	08 95       	ret
+
+0001e1b4 <LCD_Clear>:
+
+/****************** FUNCTION TO Clear LCD *************/
+void LCD_Clear()
+{
+	LCD_Command (0x01);		/* clear display */
+   1e1b4:	81 e0       	ldi	r24, 0x01	; 1
+   1e1b6:	88 df       	rcall	.-240    	; 0x1e0c8 <LCD_Command>
+	LCD_Command (0x80);		/* cursor at home position */
+   1e1b8:	80 e8       	ldi	r24, 0x80	; 128
+   1e1ba:	86 cf       	rjmp	.-244    	; 0x1e0c8 <LCD_Command>
+
+0001e1bc <LCD_String_xy>:
+}
+/****************** Send string to LCD with xy position *************/
+
+void LCD_String_xy (char row, char pos, char *str)   /* Send string to LCD with xy position */
+{
+   1e1bc:	cf 93       	push	r28
+   1e1be:	df 93       	push	r29
+   1e1c0:	ea 01       	movw	r28, r20
+	if (row == 0 && pos<16)
+   1e1c2:	81 11       	cpse	r24, r1
+   1e1c4:	05 c0       	rjmp	.+10     	; 0x1e1d0 <LCD_String_xy+0x14>
+   1e1c6:	60 31       	cpi	r22, 0x10	; 16
+   1e1c8:	50 f4       	brcc	.+20     	; 0x1e1de <LCD_String_xy+0x22>
+	LCD_Command((pos & 0x0F)|0x80);	/* Command of first row and required position<16 */
+   1e1ca:	86 2f       	mov	r24, r22
+   1e1cc:	80 68       	ori	r24, 0x80	; 128
+   1e1ce:	06 c0       	rjmp	.+12     	; 0x1e1dc <LCD_String_xy+0x20>
+	else if (row == 1 && pos<16)
+   1e1d0:	81 30       	cpi	r24, 0x01	; 1
+   1e1d2:	29 f4       	brne	.+10     	; 0x1e1de <LCD_String_xy+0x22>
+   1e1d4:	60 31       	cpi	r22, 0x10	; 16
+   1e1d6:	18 f4       	brcc	.+6      	; 0x1e1de <LCD_String_xy+0x22>
+	LCD_Command((pos & 0x0F)|0xC0);	/* Command of first row and required position<16 */
+   1e1d8:	86 2f       	mov	r24, r22
+   1e1da:	80 6c       	ori	r24, 0xC0	; 192
+   1e1dc:	75 df       	rcall	.-278    	; 0x1e0c8 <LCD_Command>
+	LCD_String(str);		/* Call LCD string function */
+   1e1de:	ce 01       	movw	r24, r28
+   1e1e0:	df 91       	pop	r29
+{
+	if (row == 0 && pos<16)
+	LCD_Command((pos & 0x0F)|0x80);	/* Command of first row and required position<16 */
+	else if (row == 1 && pos<16)
+	LCD_Command((pos & 0x0F)|0xC0);	/* Command of first row and required position<16 */
+	LCD_String(str);		/* Call LCD string function */
+   1e1e2:	cf 91       	pop	r28
+   1e1e4:	d0 cf       	rjmp	.-96     	; 0x1e186 <LCD_String>
+
+0001e1e6 <write_program_pages>:
+#define PAGESIZE 128 
+#define BLINKY_PROGRAM_SIZE_IN_BYTES sizeof(program_bin)
+#define BLINKY_PROGRAM_NUMBER_OF_PAGES ((BLINKY_PROGRAM_SIZE_IN_BYTES / PAGESIZE) + ((BLINKY_PROGRAM_SIZE_IN_BYTES % PAGESIZE == 0) ? 0 : 1))
+
+ void write_program_pages(uint32_t first_page_address, uint8_t *program_buffer)
+ {
+   1e1e6:	7f 92       	push	r7
+   1e1e8:	8f 92       	push	r8
+   1e1ea:	9f 92       	push	r9
+   1e1ec:	af 92       	push	r10
+   1e1ee:	bf 92       	push	r11
+   1e1f0:	cf 92       	push	r12
+   1e1f2:	df 92       	push	r13
+   1e1f4:	ef 92       	push	r14
+   1e1f6:	ff 92       	push	r15
+   1e1f8:	0f 93       	push	r16
+   1e1fa:	1f 93       	push	r17
+   1e1fc:	cf 93       	push	r28
+   1e1fe:	df 93       	push	r29
+	  uint16_t current_page_size;
+	  uint32_t current_page_address;
+	  uint8_t sreg_last_state;
+
+	  // Disable interrupts.
+	  sreg_last_state = SREG;
+   1e200:	ff b6       	in	r15, 0x3f	; 63
+	  cli();
+   1e202:	f8 94       	cli
+
+	  eeprom_busy_wait();
+   1e204:	e1 99       	sbic	0x1c, 1	; 28
+   1e206:	fe cf       	rjmp	.-4      	; 0x1e204 <write_program_pages+0x1e>
+   1e208:	a0 e0       	ldi	r26, 0x00	; 0
+   1e20a:	b0 e0       	ldi	r27, 0x00	; 0
+   1e20c:	c0 e8       	ldi	r28, 0x80	; 128
+   1e20e:	d0 e0       	ldi	r29, 0x00	; 0
+   1e210:	8b 01       	movw	r16, r22
+   1e212:	9c 01       	movw	r18, r24
+			  current_page_size = PAGESIZE;
+		  }
+
+		  current_page_address = first_page_address + p * PAGESIZE;
+
+		  boot_page_erase(current_page_address);
+   1e214:	f3 e0       	ldi	r31, 0x03	; 3
+   1e216:	ef 2e       	mov	r14, r31
+		  {
+			  // Set up little-endian word
+			  uint16_t w = *program_buffer++;
+			  w += (*program_buffer++) << 8;
+
+			  boot_page_fill(current_page_address + b, w);
+   1e218:	dd 24       	eor	r13, r13
+   1e21a:	d3 94       	inc	r13
+		  }
+
+		  boot_page_write(current_page_address); // Store buffer in flash page.
+   1e21c:	85 e0       	ldi	r24, 0x05	; 5
+   1e21e:	c8 2e       	mov	r12, r24
+			  current_page_size = PAGESIZE;
+		  }
+
+		  current_page_address = first_page_address + p * PAGESIZE;
+
+		  boot_page_erase(current_page_address);
+   1e220:	f8 01       	movw	r30, r16
+   1e222:	20 93 5b 00 	sts	0x005B, r18	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+   1e226:	e0 92 68 00 	sts	0x0068, r14	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e22a:	e8 95       	spm
+		  boot_spm_busy_wait(); // Wait until the memory is erased.
+   1e22c:	80 91 68 00 	lds	r24, 0x0068	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e230:	80 fd       	sbrc	r24, 0
+   1e232:	fc cf       	rjmp	.-8      	; 0x1e22c <write_program_pages+0x46>
+   1e234:	60 e0       	ldi	r22, 0x00	; 0
+   1e236:	70 e0       	ldi	r23, 0x00	; 0
+
+		  for (b = 0; b < current_page_size; b += 2)
+		  {
+			  // Set up little-endian word
+			  uint16_t w = *program_buffer++;
+   1e238:	fa 01       	movw	r30, r20
+   1e23a:	70 80       	ld	r7, Z
+   1e23c:	4e 5f       	subi	r20, 0xFE	; 254
+   1e23e:	5f 4f       	sbci	r21, 0xFF	; 255
+			  w += (*program_buffer++) << 8;
+
+			  boot_page_fill(current_page_address + b, w);
+   1e240:	48 01       	movw	r8, r16
+   1e242:	59 01       	movw	r10, r18
+   1e244:	86 0e       	add	r8, r22
+   1e246:	97 1e       	adc	r9, r23
+   1e248:	a1 1c       	adc	r10, r1
+   1e24a:	b1 1c       	adc	r11, r1
+
+		  for (b = 0; b < current_page_size; b += 2)
+		  {
+			  // Set up little-endian word
+			  uint16_t w = *program_buffer++;
+			  w += (*program_buffer++) << 8;
+   1e24c:	31 96       	adiw	r30, 0x01	; 1
+
+			  boot_page_fill(current_page_address + b, w);
+   1e24e:	80 81       	ld	r24, Z
+   1e250:	90 e0       	ldi	r25, 0x00	; 0
+   1e252:	98 2f       	mov	r25, r24
+   1e254:	88 27       	eor	r24, r24
+   1e256:	87 0d       	add	r24, r7
+   1e258:	91 1d       	adc	r25, r1
+   1e25a:	0c 01       	movw	r0, r24
+   1e25c:	f4 01       	movw	r30, r8
+   1e25e:	a0 92 5b 00 	sts	0x005B, r10	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+   1e262:	d0 92 68 00 	sts	0x0068, r13	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e266:	e8 95       	spm
+   1e268:	11 24       	eor	r1, r1
+		  current_page_address = first_page_address + p * PAGESIZE;
+
+		  boot_page_erase(current_page_address);
+		  boot_spm_busy_wait(); // Wait until the memory is erased.
+
+		  for (b = 0; b < current_page_size; b += 2)
+   1e26a:	6e 5f       	subi	r22, 0xFE	; 254
+   1e26c:	7f 4f       	sbci	r23, 0xFF	; 255
+   1e26e:	6c 17       	cp	r22, r28
+   1e270:	7d 07       	cpc	r23, r29
+   1e272:	10 f3       	brcs	.-60     	; 0x1e238 <write_program_pages+0x52>
+			  w += (*program_buffer++) << 8;
+
+			  boot_page_fill(current_page_address + b, w);
+		  }
+
+		  boot_page_write(current_page_address); // Store buffer in flash page.
+   1e274:	f8 01       	movw	r30, r16
+   1e276:	20 93 5b 00 	sts	0x005B, r18	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+   1e27a:	c0 92 68 00 	sts	0x0068, r12	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e27e:	e8 95       	spm
+		  boot_spm_busy_wait();                  // Wait until the memory is written.
+   1e280:	80 91 68 00 	lds	r24, 0x0068	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e284:	80 fd       	sbrc	r24, 0
+   1e286:	fc cf       	rjmp	.-8      	; 0x1e280 <write_program_pages+0x9a>
+	  sreg_last_state = SREG;
+	  cli();
+
+	  eeprom_busy_wait();
+
+	  for (p = 0; p < BLINKY_PROGRAM_NUMBER_OF_PAGES; p++)
+   1e288:	11 96       	adiw	r26, 0x01	; 1
+   1e28a:	a8 30       	cpi	r26, 0x08	; 8
+   1e28c:	b1 05       	cpc	r27, r1
+   1e28e:	69 f0       	breq	.+26     	; 0x1e2aa <write_program_pages+0xc4>
+	  {
+		  // Calculate current page size in bytes
+		  if (p == BLINKY_PROGRAM_NUMBER_OF_PAGES - 1)
+   1e290:	a7 30       	cpi	r26, 0x07	; 7
+   1e292:	b1 05       	cpc	r27, r1
+   1e294:	19 f0       	breq	.+6      	; 0x1e29c <write_program_pages+0xb6>
+			  current_page_size = BLINKY_PROGRAM_SIZE_IN_BYTES -PAGESIZE * (BLINKY_PROGRAM_NUMBER_OF_PAGES - 1);
+		  }
+		  else
+		  {
+			  // Other page sizes
+			  current_page_size = PAGESIZE;
+   1e296:	c0 e8       	ldi	r28, 0x80	; 128
+   1e298:	d0 e0       	ldi	r29, 0x00	; 0
+   1e29a:	02 c0       	rjmp	.+4      	; 0x1e2a0 <write_program_pages+0xba>
+	  {
+		  // Calculate current page size in bytes
+		  if (p == BLINKY_PROGRAM_NUMBER_OF_PAGES - 1)
+		  {
+			  // Last page size
+			  current_page_size = BLINKY_PROGRAM_SIZE_IN_BYTES -PAGESIZE * (BLINKY_PROGRAM_NUMBER_OF_PAGES - 1);
+   1e29c:	c2 e1       	ldi	r28, 0x12	; 18
+   1e29e:	d0 e0       	ldi	r29, 0x00	; 0
+   1e2a0:	00 58       	subi	r16, 0x80	; 128
+   1e2a2:	1f 4f       	sbci	r17, 0xFF	; 255
+   1e2a4:	2f 4f       	sbci	r18, 0xFF	; 255
+   1e2a6:	3f 4f       	sbci	r19, 0xFF	; 255
+   1e2a8:	bb cf       	rjmp	.-138    	; 0x1e220 <write_program_pages+0x3a>
+		  boot_spm_busy_wait();                  // Wait until the memory is written.
+	  }
+
+	  // Re-enable RWW-section again. We need this if we want to jump back
+	  // to the application after bootloading.
+	  boot_rww_enable();
+   1e2aa:	81 e1       	ldi	r24, 0x11	; 17
+   1e2ac:	80 93 68 00 	sts	0x0068, r24	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e2b0:	e8 95       	spm
+
+	  // Re-enable interrupts (if they were ever enabled).
+	  SREG = sreg_last_state;
+   1e2b2:	ff be       	out	0x3f, r15	; 63
+  }
+   1e2b4:	df 91       	pop	r29
+   1e2b6:	cf 91       	pop	r28
+   1e2b8:	1f 91       	pop	r17
+   1e2ba:	0f 91       	pop	r16
+   1e2bc:	ff 90       	pop	r15
+   1e2be:	ef 90       	pop	r14
+   1e2c0:	df 90       	pop	r13
+   1e2c2:	cf 90       	pop	r12
+   1e2c4:	bf 90       	pop	r11
+   1e2c6:	af 90       	pop	r10
+   1e2c8:	9f 90       	pop	r9
+   1e2ca:	8f 90       	pop	r8
+   1e2cc:	7f 90       	pop	r7
+   1e2ce:	08 95       	ret
+
+0001e2d0 <write_program_pages_fota>:
+
+/*****************************************************************************************************/
+uint16_t nn=0; char str[5]="";
+void write_program_pages_fota(uint32_t first_page_address,uint16_t LEN)
+{
+   1e2d0:	2f 92       	push	r2
+   1e2d2:	3f 92       	push	r3
+   1e2d4:	4f 92       	push	r4
+   1e2d6:	5f 92       	push	r5
+   1e2d8:	6f 92       	push	r6
+   1e2da:	7f 92       	push	r7
+   1e2dc:	8f 92       	push	r8
+   1e2de:	9f 92       	push	r9
+   1e2e0:	af 92       	push	r10
+   1e2e2:	bf 92       	push	r11
+   1e2e4:	cf 92       	push	r12
+   1e2e6:	df 92       	push	r13
+   1e2e8:	ef 92       	push	r14
+   1e2ea:	ff 92       	push	r15
+   1e2ec:	0f 93       	push	r16
+   1e2ee:	1f 93       	push	r17
+   1e2f0:	cf 93       	push	r28
+   1e2f2:	df 93       	push	r29
+   1e2f4:	cd b7       	in	r28, 0x3d	; 61
+   1e2f6:	de b7       	in	r29, 0x3e	; 62
+   1e2f8:	2e 97       	sbiw	r28, 0x0e	; 14
+   1e2fa:	0f b6       	in	r0, 0x3f	; 63
+   1e2fc:	f8 94       	cli
+   1e2fe:	de bf       	out	0x3e, r29	; 62
+   1e300:	0f be       	out	0x3f, r0	; 63
+   1e302:	cd bf       	out	0x3d, r28	; 61
+   1e304:	2b 01       	movw	r4, r22
+   1e306:	3c 01       	movw	r6, r24
+   1e308:	8a 01       	movw	r16, r20
+	uint16_t page_size =128,pos=0 , num_pages= ((LEN /  page_size) + ((LEN %  page_size == 0) ? 0 : 1));
+   1e30a:	9a 01       	movw	r18, r20
+   1e30c:	2f 77       	andi	r18, 0x7F	; 127
+   1e30e:	33 27       	eor	r19, r19
+   1e310:	81 e0       	ldi	r24, 0x01	; 1
+   1e312:	90 e0       	ldi	r25, 0x00	; 0
+   1e314:	23 2b       	or	r18, r19
+   1e316:	11 f4       	brne	.+4      	; 0x1e31c <write_program_pages_fota+0x4c>
+   1e318:	80 e0       	ldi	r24, 0x00	; 0
+   1e31a:	90 e0       	ldi	r25, 0x00	; 0
+   1e31c:	98 01       	movw	r18, r16
+   1e31e:	22 0f       	add	r18, r18
+   1e320:	23 2f       	mov	r18, r19
+   1e322:	22 1f       	adc	r18, r18
+   1e324:	33 0b       	sbc	r19, r19
+   1e326:	31 95       	neg	r19
+   1e328:	ac 01       	movw	r20, r24
+   1e32a:	42 0f       	add	r20, r18
+   1e32c:	53 1f       	adc	r21, r19
+   1e32e:	5c 83       	std	Y+4, r21	; 0x04
+   1e330:	4b 83       	std	Y+3, r20	; 0x03
+	uint16_t current_page_size;
+	uint32_t current_page_address;
+	uint8_t sreg_last_state;
+	char L_Byte, H_Byte; 
+	// Disable interrupts.
+	sreg_last_state = SREG;
+   1e332:	5f b7       	in	r21, 0x3f	; 63
+   1e334:	5f 83       	std	Y+7, r21	; 0x07
+	cli();
+   1e336:	f8 94       	cli
+
+	eeprom_busy_wait();
+   1e338:	e1 99       	sbic	0x1c, 1	; 28
+   1e33a:	fe cf       	rjmp	.-4      	; 0x1e338 <write_program_pages_fota+0x68>
+   1e33c:	c1 2c       	mov	r12, r1
+   1e33e:	d1 2c       	mov	r13, r1
+   1e340:	21 2c       	mov	r2, r1
+   1e342:	31 2c       	mov	r3, r1
+
+	for (p = 0; p <num_pages; p++)
+	{
+		// Calculate current page size in bytes
+		if (p ==num_pages - 1)
+   1e344:	8b 81       	ldd	r24, Y+3	; 0x03
+   1e346:	9c 81       	ldd	r25, Y+4	; 0x04
+   1e348:	01 97       	sbiw	r24, 0x01	; 1
+   1e34a:	99 87       	std	Y+9, r25	; 0x09
+   1e34c:	88 87       	std	Y+8, r24	; 0x08
+		boot_page_erase(current_page_address);
+		boot_spm_busy_wait(); // Wait until the memory is erased.
+
+		for (b = 0; b < current_page_size; b += 2)
+		{
+			if (LEN%2==0)
+   1e34e:	98 01       	movw	r18, r16
+   1e350:	21 70       	andi	r18, 0x01	; 1
+   1e352:	33 27       	eor	r19, r19
+   1e354:	3b 87       	std	Y+11, r19	; 0x0b
+   1e356:	2a 87       	std	Y+10, r18	; 0x0a
+	sreg_last_state = SREG;
+	cli();
+
+	eeprom_busy_wait();
+
+	for (p = 0; p <num_pages; p++)
+   1e358:	4b 81       	ldd	r20, Y+3	; 0x03
+   1e35a:	5c 81       	ldd	r21, Y+4	; 0x04
+   1e35c:	24 16       	cp	r2, r20
+   1e35e:	35 06       	cpc	r3, r21
+   1e360:	09 f4       	brne	.+2      	; 0x1e364 <write_program_pages_fota+0x94>
+   1e362:	93 c0       	rjmp	.+294    	; 0x1e48a <write_program_pages_fota+0x1ba>
+	{
+		// Calculate current page size in bytes
+		if (p ==num_pages - 1)
+   1e364:	48 85       	ldd	r20, Y+8	; 0x08
+   1e366:	59 85       	ldd	r21, Y+9	; 0x09
+   1e368:	24 16       	cp	r2, r20
+   1e36a:	35 06       	cpc	r3, r21
+   1e36c:	31 f4       	brne	.+12     	; 0x1e37a <write_program_pages_fota+0xaa>
+   1e36e:	c8 01       	movw	r24, r16
+   1e370:	8c 19       	sub	r24, r12
+   1e372:	9d 09       	sbc	r25, r13
+   1e374:	9a 83       	std	Y+2, r25	; 0x02
+   1e376:	89 83       	std	Y+1, r24	; 0x01
+   1e378:	04 c0       	rjmp	.+8      	; 0x1e382 <write_program_pages_fota+0xb2>
+			current_page_size =LEN - page_size * (num_pages - 1);
+		}
+		else
+		{
+			// Other page sizes
+			current_page_size = page_size;
+   1e37a:	20 e8       	ldi	r18, 0x80	; 128
+   1e37c:	30 e0       	ldi	r19, 0x00	; 0
+   1e37e:	3a 83       	std	Y+2, r19	; 0x02
+   1e380:	29 83       	std	Y+1, r18	; 0x01
+		}
+
+		current_page_address = first_page_address + p * page_size;
+   1e382:	53 01       	movw	r10, r6
+   1e384:	42 01       	movw	r8, r4
+   1e386:	8c 0c       	add	r8, r12
+   1e388:	9d 1c       	adc	r9, r13
+   1e38a:	a1 1c       	adc	r10, r1
+   1e38c:	b1 1c       	adc	r11, r1
+
+		boot_page_erase(current_page_address);
+   1e38e:	33 e0       	ldi	r19, 0x03	; 3
+   1e390:	f4 01       	movw	r30, r8
+   1e392:	a0 92 5b 00 	sts	0x005B, r10	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+   1e396:	30 93 68 00 	sts	0x0068, r19	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e39a:	e8 95       	spm
+		boot_spm_busy_wait(); // Wait until the memory is erased.
+   1e39c:	80 91 68 00 	lds	r24, 0x0068	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e3a0:	80 fd       	sbrc	r24, 0
+   1e3a2:	fc cf       	rjmp	.-8      	; 0x1e39c <write_program_pages_fota+0xcc>
+   1e3a4:	e1 2c       	mov	r14, r1
+   1e3a6:	f1 2c       	mov	r15, r1
+
+		for (b = 0; b < current_page_size; b += 2)
+   1e3a8:	89 81       	ldd	r24, Y+1	; 0x01
+   1e3aa:	9a 81       	ldd	r25, Y+2	; 0x02
+   1e3ac:	e8 16       	cp	r14, r24
+   1e3ae:	f9 06       	cpc	r15, r25
+   1e3b0:	08 f0       	brcs	.+2      	; 0x1e3b4 <write_program_pages_fota+0xe4>
+   1e3b2:	59 c0       	rjmp	.+178    	; 0x1e466 <write_program_pages_fota+0x196>
+		{
+			if (LEN%2==0)
+   1e3b4:	4a 85       	ldd	r20, Y+10	; 0x0a
+   1e3b6:	5b 85       	ldd	r21, Y+11	; 0x0b
+   1e3b8:	45 2b       	or	r20, r21
+   1e3ba:	b9 f4       	brne	.+46     	; 0x1e3ea <write_program_pages_fota+0x11a>
+			{
+				L_Byte=USART_Receive();
+   1e3bc:	57 d1       	rcall	.+686    	; 0x1e66c <USART_Receive>
+   1e3be:	8d 83       	std	Y+5, r24	; 0x05
+				nn++;
+   1e3c0:	80 91 08 05 	lds	r24, 0x0508	; 0x800508 <__data_end>
+   1e3c4:	90 91 09 05 	lds	r25, 0x0509	; 0x800509 <__data_end+0x1>
+   1e3c8:	01 96       	adiw	r24, 0x01	; 1
+   1e3ca:	90 93 09 05 	sts	0x0509, r25	; 0x800509 <__data_end+0x1>
+   1e3ce:	80 93 08 05 	sts	0x0508, r24	; 0x800508 <__data_end>
+				H_Byte=USART_Receive();
+   1e3d2:	4c d1       	rcall	.+664    	; 0x1e66c <USART_Receive>
+   1e3d4:	8c 87       	std	Y+12, r24	; 0x0c
+				nn++;
+   1e3d6:	80 91 08 05 	lds	r24, 0x0508	; 0x800508 <__data_end>
+   1e3da:	90 91 09 05 	lds	r25, 0x0509	; 0x800509 <__data_end+0x1>
+   1e3de:	01 96       	adiw	r24, 0x01	; 1
+   1e3e0:	90 93 09 05 	sts	0x0509, r25	; 0x800509 <__data_end+0x1>
+   1e3e4:	80 93 08 05 	sts	0x0508, r24	; 0x800508 <__data_end>
+   1e3e8:	10 c0       	rjmp	.+32     	; 0x1e40a <write_program_pages_fota+0x13a>
+			}
+			else
+			{
+				if (pos==(LEN-1))
+   1e3ea:	01 30       	cpi	r16, 0x01	; 1
+   1e3ec:	11 05       	cpc	r17, r1
+				{
+					L_Byte=USART_Receive();
+   1e3ee:	31 f7       	brne	.-52     	; 0x1e3bc <write_program_pages_fota+0xec>
+   1e3f0:	3d d1       	rcall	.+634    	; 0x1e66c <USART_Receive>
+   1e3f2:	8d 83       	std	Y+5, r24	; 0x05
+					nn++;
+					H_Byte=0xff;
+					nn++;
+   1e3f4:	80 91 08 05 	lds	r24, 0x0508	; 0x800508 <__data_end>
+   1e3f8:	90 91 09 05 	lds	r25, 0x0509	; 0x800509 <__data_end+0x1>
+   1e3fc:	02 96       	adiw	r24, 0x02	; 2
+   1e3fe:	90 93 09 05 	sts	0x0509, r25	; 0x800509 <__data_end+0x1>
+   1e402:	80 93 08 05 	sts	0x0508, r24	; 0x800508 <__data_end>
+			{
+				if (pos==(LEN-1))
+				{
+					L_Byte=USART_Receive();
+					nn++;
+					H_Byte=0xff;
+   1e406:	5f ef       	ldi	r21, 0xFF	; 255
+   1e408:	5c 87       	std	Y+12, r21	; 0x0c
+			}
+			//sprintf(str ,"%d",nn);
+			//LCD_Clear();
+		    //_delay_ms(4);
+			//LCD_String(str);
+			USART_Transmit1(L_Byte);
+   1e40a:	9d 81       	ldd	r25, Y+5	; 0x05
+   1e40c:	89 2f       	mov	r24, r25
+   1e40e:	90 e0       	ldi	r25, 0x00	; 0
+   1e410:	9e 83       	std	Y+6, r25	; 0x06
+   1e412:	8d 83       	std	Y+5, r24	; 0x05
+			USART_Transmit1('\r');
+   1e414:	24 d1       	rcall	.+584    	; 0x1e65e <USART_Transmit1>
+   1e416:	8d e0       	ldi	r24, 0x0D	; 13
+   1e418:	90 e0       	ldi	r25, 0x00	; 0
+   1e41a:	21 d1       	rcall	.+578    	; 0x1e65e <USART_Transmit1>
+			USART_Transmit1(H_Byte);
+   1e41c:	3c 85       	ldd	r19, Y+12	; 0x0c
+   1e41e:	23 2f       	mov	r18, r19
+   1e420:	30 e0       	ldi	r19, 0x00	; 0
+   1e422:	3e 87       	std	Y+14, r19	; 0x0e
+   1e424:	2d 87       	std	Y+13, r18	; 0x0d
+   1e426:	c9 01       	movw	r24, r18
+			USART_Transmit1('\r');
+   1e428:	1a d1       	rcall	.+564    	; 0x1e65e <USART_Transmit1>
+   1e42a:	8d e0       	ldi	r24, 0x0D	; 13
+   1e42c:	90 e0       	ldi	r25, 0x00	; 0
+   1e42e:	17 d1       	rcall	.+558    	; 0x1e65e <USART_Transmit1>
+			
+			// Set up little-endian word
+			uint16_t w = L_Byte;
+			w += (H_Byte) << 8;
+
+			boot_page_fill(current_page_address + b, w);
+   1e430:	d5 01       	movw	r26, r10
+   1e432:	c4 01       	movw	r24, r8
+   1e434:	8e 0d       	add	r24, r14
+   1e436:	9f 1d       	adc	r25, r15
+   1e438:	a1 1d       	adc	r26, r1
+   1e43a:	b1 1d       	adc	r27, r1
+   1e43c:	4d 85       	ldd	r20, Y+13	; 0x0d
+   1e43e:	5e 85       	ldd	r21, Y+14	; 0x0e
+   1e440:	54 2f       	mov	r21, r20
+   1e442:	44 27       	eor	r20, r20
+   1e444:	2d 81       	ldd	r18, Y+5	; 0x05
+   1e446:	3e 81       	ldd	r19, Y+6	; 0x06
+   1e448:	42 0f       	add	r20, r18
+   1e44a:	53 1f       	adc	r21, r19
+   1e44c:	31 e0       	ldi	r19, 0x01	; 1
+   1e44e:	0a 01       	movw	r0, r20
+   1e450:	fc 01       	movw	r30, r24
+   1e452:	a0 93 5b 00 	sts	0x005B, r26	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+   1e456:	30 93 68 00 	sts	0x0068, r19	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e45a:	e8 95       	spm
+   1e45c:	11 24       	eor	r1, r1
+		current_page_address = first_page_address + p * page_size;
+
+		boot_page_erase(current_page_address);
+		boot_spm_busy_wait(); // Wait until the memory is erased.
+
+		for (b = 0; b < current_page_size; b += 2)
+   1e45e:	42 e0       	ldi	r20, 0x02	; 2
+   1e460:	e4 0e       	add	r14, r20
+   1e462:	f1 1c       	adc	r15, r1
+   1e464:	a1 cf       	rjmp	.-190    	; 0x1e3a8 <write_program_pages_fota+0xd8>
+			w += (H_Byte) << 8;
+
+			boot_page_fill(current_page_address + b, w);
+		}
+
+		boot_page_write(current_page_address); // Store buffer in flash page.
+   1e466:	95 e0       	ldi	r25, 0x05	; 5
+   1e468:	f4 01       	movw	r30, r8
+   1e46a:	a0 92 5b 00 	sts	0x005B, r10	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+   1e46e:	90 93 68 00 	sts	0x0068, r25	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e472:	e8 95       	spm
+		boot_spm_busy_wait();                  // Wait until the memory is written.
+   1e474:	80 91 68 00 	lds	r24, 0x0068	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e478:	80 fd       	sbrc	r24, 0
+   1e47a:	fc cf       	rjmp	.-8      	; 0x1e474 <write_program_pages_fota+0x1a4>
+	sreg_last_state = SREG;
+	cli();
+
+	eeprom_busy_wait();
+
+	for (p = 0; p <num_pages; p++)
+   1e47c:	2f ef       	ldi	r18, 0xFF	; 255
+   1e47e:	22 1a       	sub	r2, r18
+   1e480:	32 0a       	sbc	r3, r18
+   1e482:	30 e8       	ldi	r19, 0x80	; 128
+   1e484:	c3 0e       	add	r12, r19
+   1e486:	d1 1c       	adc	r13, r1
+   1e488:	67 cf       	rjmp	.-306    	; 0x1e358 <write_program_pages_fota+0x88>
+		boot_spm_busy_wait();                  // Wait until the memory is written.
+	}
+
+	// Re-enable RWW-section again. We need this if we want to jump back
+	// to the application after bootloading.
+	boot_rww_enable();
+   1e48a:	81 e1       	ldi	r24, 0x11	; 17
+   1e48c:	80 93 68 00 	sts	0x0068, r24	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+   1e490:	e8 95       	spm
+
+	// Re-enable interrupts (if they were ever enabled).
+	SREG = sreg_last_state;
+   1e492:	5f 81       	ldd	r21, Y+7	; 0x07
+   1e494:	5f bf       	out	0x3f, r21	; 63
+}
+   1e496:	2e 96       	adiw	r28, 0x0e	; 14
+   1e498:	0f b6       	in	r0, 0x3f	; 63
+   1e49a:	f8 94       	cli
+   1e49c:	de bf       	out	0x3e, r29	; 62
+   1e49e:	0f be       	out	0x3f, r0	; 63
+   1e4a0:	cd bf       	out	0x3d, r28	; 61
+   1e4a2:	df 91       	pop	r29
+   1e4a4:	cf 91       	pop	r28
+   1e4a6:	1f 91       	pop	r17
+   1e4a8:	0f 91       	pop	r16
+   1e4aa:	ff 90       	pop	r15
+   1e4ac:	ef 90       	pop	r14
+   1e4ae:	df 90       	pop	r13
+   1e4b0:	cf 90       	pop	r12
+   1e4b2:	bf 90       	pop	r11
+   1e4b4:	af 90       	pop	r10
+   1e4b6:	9f 90       	pop	r9
+   1e4b8:	8f 90       	pop	r8
+   1e4ba:	7f 90       	pop	r7
+   1e4bc:	6f 90       	pop	r6
+   1e4be:	5f 90       	pop	r5
+   1e4c0:	4f 90       	pop	r4
+   1e4c2:	3f 90       	pop	r3
+   1e4c4:	2f 90       	pop	r2
+   1e4c6:	08 95       	ret
+
+0001e4c8 <main>:
+
+/*****************************************************************************************/
+
+int main(void)
+{
+	LCD_Init();
+   1e4c8:	21 de       	rcall	.-958    	; 0x1e10c <LCD_Init>
+
+	USART_Init( BAUD_PRESCALE);   //Initialise the USART 0 ; 
+   1e4ca:	83 e3       	ldi	r24, 0x33	; 51
+   1e4cc:	90 e0       	ldi	r25, 0x00	; 0
+   1e4ce:	b2 d0       	rcall	.+356    	; 0x1e634 <USART_Init>
+
+	DDRA = (1 << PA0);  // Configure LED PA0 as output
+   1e4d0:	81 e0       	ldi	r24, 0x01	; 1
+   1e4d2:	8a bb       	out	0x1a, r24	; 26
+	//eeprom_update_byte ((uint8_t *)6, '0' );
+	
+	/**************************************************************************/	
+		if ( eeprom_read_byte ((uint8_t*)0x10)==255)
+   1e4d4:	80 e1       	ldi	r24, 0x10	; 16
+   1e4d6:	90 e0       	ldi	r25, 0x00	; 0
+   1e4d8:	df d0       	rcall	.+446    	; 0x1e698 <eeprom_read_byte>
+   1e4da:	8f 3f       	cpi	r24, 0xFF	; 255
+   1e4dc:	09 f0       	breq	.+2      	; 0x1e4e0 <main+0x18>
+   1e4de:	4e c0       	rjmp	.+156    	; 0x1e57c <main+0xb4>
+		{  
+			LCD_String("  Firmware V0.0");
+   1e4e0:	82 e9       	ldi	r24, 0x92	; 146
+   1e4e2:	94 e0       	ldi	r25, 0x04	; 4
+   1e4e4:	50 de       	rcall	.-864    	; 0x1e186 <LCD_String>
+   1e4e6:	42 ea       	ldi	r20, 0xA2	; 162
+			LCD_String_xy(1,3,"Loaded Now");
+   1e4e8:	54 e0       	ldi	r21, 0x04	; 4
+   1e4ea:	63 e0       	ldi	r22, 0x03	; 3
+   1e4ec:	81 e0       	ldi	r24, 0x01	; 1
+   1e4ee:	66 de       	rcall	.-820    	; 0x1e1bc <LCD_String_xy>
+   1e4f0:	2f ef       	ldi	r18, 0xFF	; 255
+   1e4f2:	3d e3       	ldi	r19, 0x3D	; 61
+   1e4f4:	49 e4       	ldi	r20, 0x49	; 73
+   1e4f6:	21 50       	subi	r18, 0x01	; 1
+   1e4f8:	30 40       	sbci	r19, 0x00	; 0
+   1e4fa:	40 40       	sbci	r20, 0x00	; 0
+   1e4fc:	e1 f7       	brne	.-8      	; 0x1e4f6 <main+0x2e>
+   1e4fe:	00 c0       	rjmp	.+0      	; 0x1e500 <main+0x38>
+   1e500:	00 00       	nop
+   1e502:	8a e0       	ldi	r24, 0x0A	; 10
+   1e504:	90 e0       	ldi	r25, 0x00	; 0
+   1e506:	d8 9a       	sbi	0x1b, 0	; 27
+			_delay_ms(3000);
+			 
+			// Blink LED 10 times slowly to show that the bootloader program is starting
+			for(int a=0 ; a<10 ; a++)
+			{
+				PORTA |= 1 << PA0; // Turn-on LED
+   1e508:	2f ef       	ldi	r18, 0xFF	; 255
+   1e50a:	34 e3       	ldi	r19, 0x34	; 52
+   1e50c:	4c e0       	ldi	r20, 0x0C	; 12
+   1e50e:	21 50       	subi	r18, 0x01	; 1
+   1e510:	30 40       	sbci	r19, 0x00	; 0
+   1e512:	40 40       	sbci	r20, 0x00	; 0
+   1e514:	e1 f7       	brne	.-8      	; 0x1e50e <main+0x46>
+   1e516:	00 c0       	rjmp	.+0      	; 0x1e518 <main+0x50>
+   1e518:	00 00       	nop
+   1e51a:	d8 98       	cbi	0x1b, 0	; 27
+				_delay_ms(500);
+				PORTA &= ~(1 << PA0); // Turn-off LED
+   1e51c:	2f ef       	ldi	r18, 0xFF	; 255
+   1e51e:	34 e3       	ldi	r19, 0x34	; 52
+   1e520:	4c e0       	ldi	r20, 0x0C	; 12
+   1e522:	21 50       	subi	r18, 0x01	; 1
+   1e524:	30 40       	sbci	r19, 0x00	; 0
+   1e526:	40 40       	sbci	r20, 0x00	; 0
+   1e528:	e1 f7       	brne	.-8      	; 0x1e522 <main+0x5a>
+   1e52a:	00 c0       	rjmp	.+0      	; 0x1e52c <main+0x64>
+   1e52c:	00 00       	nop
+   1e52e:	01 97       	sbiw	r24, 0x01	; 1
+			LCD_String("  Firmware V0.0");
+			LCD_String_xy(1,3,"Loaded Now");
+			_delay_ms(3000);
+			 
+			// Blink LED 10 times slowly to show that the bootloader program is starting
+			for(int a=0 ; a<10 ; a++)
+   1e530:	51 f7       	brne	.-44     	; 0x1e506 <main+0x3e>
+				_delay_ms(500);
+				PORTA &= ~(1 << PA0); // Turn-off LED
+				_delay_ms(500);
+			}
+			
+			eeprom_update_byte ((uint8_t *)0x10,0); 
+   1e532:	60 e0       	ldi	r22, 0x00	; 0
+   1e534:	80 e1       	ldi	r24, 0x10	; 16
+   1e536:	90 e0       	ldi	r25, 0x00	; 0
+   1e538:	bc d0       	rcall	.+376    	; 0x1e6b2 <eeprom_update_byte>
+			
+			write_program_pages(0x00000,  program_bin);
+   1e53a:	40 e0       	ldi	r20, 0x00	; 0
+   1e53c:	51 e0       	ldi	r21, 0x01	; 1
+   1e53e:	60 e0       	ldi	r22, 0x00	; 0
+   1e540:	70 e0       	ldi	r23, 0x00	; 0
+   1e542:	cb 01       	movw	r24, r22
+   1e544:	50 de       	rcall	.-864    	; 0x1e1e6 <write_program_pages>
+			
+			LCD_Clear();  _delay_ms(10); 
+   1e546:	36 de       	rcall	.-916    	; 0x1e1b4 <LCD_Clear>
+   1e548:	8f e1       	ldi	r24, 0x1F	; 31
+   1e54a:	9e e4       	ldi	r25, 0x4E	; 78
+   1e54c:	01 97       	sbiw	r24, 0x01	; 1
+   1e54e:	f1 f7       	brne	.-4      	; 0x1e54c <main+0x84>
+   1e550:	00 c0       	rjmp	.+0      	; 0x1e552 <main+0x8a>
+   1e552:	00 00       	nop
+				
+			LCD_String("Firmware Loaded");
+   1e554:	8d ea       	ldi	r24, 0xAD	; 173
+   1e556:	94 e0       	ldi	r25, 0x04	; 4
+   1e558:	16 de       	rcall	.-980    	; 0x1e186 <LCD_String>
+   1e55a:	4d eb       	ldi	r20, 0xBD	; 189
+			
+			LCD_String_xy(1,2,"Successfully");
+   1e55c:	54 e0       	ldi	r21, 0x04	; 4
+   1e55e:	62 e0       	ldi	r22, 0x02	; 2
+   1e560:	81 e0       	ldi	r24, 0x01	; 1
+   1e562:	2c de       	rcall	.-936    	; 0x1e1bc <LCD_String_xy>
+   1e564:	9f ef       	ldi	r25, 0xFF	; 255
+   1e566:	2d e3       	ldi	r18, 0x3D	; 61
+   1e568:	39 e4       	ldi	r19, 0x49	; 73
+   1e56a:	91 50       	subi	r25, 0x01	; 1
+   1e56c:	20 40       	sbci	r18, 0x00	; 0
+   1e56e:	30 40       	sbci	r19, 0x00	; 0
+   1e570:	e1 f7       	brne	.-8      	; 0x1e56a <main+0xa2>
+   1e572:	00 c0       	rjmp	.+0      	; 0x1e574 <main+0xac>
+   1e574:	00 00       	nop
+			
+			_delay_ms(3000);
+			
+			LCD_Clear();
+   1e576:	1e de       	rcall	.-964    	; 0x1e1b4 <LCD_Clear>
+   1e578:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+			
+			asm("jmp 0");
+		}
+		/*******************************************************************************/
+		if ( eeprom_read_byte ((uint8_t *)6)=='F')
+   1e57c:	86 e0       	ldi	r24, 0x06	; 6
+   1e57e:	90 e0       	ldi	r25, 0x00	; 0
+   1e580:	8b d0       	rcall	.+278    	; 0x1e698 <eeprom_read_byte>
+   1e582:	86 34       	cpi	r24, 0x46	; 70
+   1e584:	09 f0       	breq	.+2      	; 0x1e588 <main+0xc0>
+   1e586:	48 c0       	rjmp	.+144    	; 0x1e618 <main+0x150>
+		{
+			eeprom_update_byte ((uint8_t *)6, '0'); _delay_ms(10);
+   1e588:	60 e3       	ldi	r22, 0x30	; 48
+   1e58a:	86 e0       	ldi	r24, 0x06	; 6
+   1e58c:	90 e0       	ldi	r25, 0x00	; 0
+   1e58e:	91 d0       	rcall	.+290    	; 0x1e6b2 <eeprom_update_byte>
+   1e590:	8f e1       	ldi	r24, 0x1F	; 31
+   1e592:	9e e4       	ldi	r25, 0x4E	; 78
+   1e594:	01 97       	sbiw	r24, 0x01	; 1
+   1e596:	f1 f7       	brne	.-4      	; 0x1e594 <main+0xcc>
+   1e598:	00 c0       	rjmp	.+0      	; 0x1e59a <main+0xd2>
+   1e59a:	00 00       	nop
+			LCD_Clear();  _delay_ms(10);
+   1e59c:	0b de       	rcall	.-1002   	; 0x1e1b4 <LCD_Clear>
+   1e59e:	8f e1       	ldi	r24, 0x1F	; 31
+   1e5a0:	9e e4       	ldi	r25, 0x4E	; 78
+   1e5a2:	01 97       	sbiw	r24, 0x01	; 1
+   1e5a4:	f1 f7       	brne	.-4      	; 0x1e5a2 <main+0xda>
+   1e5a6:	00 c0       	rjmp	.+0      	; 0x1e5a8 <main+0xe0>
+   1e5a8:	00 00       	nop
+   1e5aa:	8a ec       	ldi	r24, 0xCA	; 202
+			LCD_String("FOTA Process");  UART_SendString1("New Firmware is Loaded Now : \r\n");
+   1e5ac:	94 e0       	ldi	r25, 0x04	; 4
+   1e5ae:	eb dd       	rcall	.-1066   	; 0x1e186 <LCD_String>
+   1e5b0:	87 ed       	ldi	r24, 0xD7	; 215
+   1e5b2:	94 e0       	ldi	r25, 0x04	; 4
+   1e5b4:	5f d0       	rcall	.+190    	; 0x1e674 <UART_SendString1>
+   1e5b6:	9f ef       	ldi	r25, 0xFF	; 255
+   1e5b8:	23 ed       	ldi	r18, 0xD3	; 211
+   1e5ba:	30 e3       	ldi	r19, 0x30	; 48
+   1e5bc:	91 50       	subi	r25, 0x01	; 1
+   1e5be:	20 40       	sbci	r18, 0x00	; 0
+   1e5c0:	30 40       	sbci	r19, 0x00	; 0
+   1e5c2:	e1 f7       	brne	.-8      	; 0x1e5bc <main+0xf4>
+   1e5c4:	00 c0       	rjmp	.+0      	; 0x1e5c6 <main+0xfe>
+			 _delay_ms(2000);
+			USART_Transmit('S');
+   1e5c6:	00 00       	nop
+   1e5c8:	83 e5       	ldi	r24, 0x53	; 83
+   1e5ca:	45 d0       	rcall	.+138    	; 0x1e656 <USART_Transmit>
+			write_program_pages_fota(0,eeprom_read_word ((uint16_t *)4));
+   1e5cc:	84 e0       	ldi	r24, 0x04	; 4
+   1e5ce:	90 e0       	ldi	r25, 0x00	; 0
+   1e5d0:	6b d0       	rcall	.+214    	; 0x1e6a8 <eeprom_read_word>
+   1e5d2:	ac 01       	movw	r20, r24
+   1e5d4:	60 e0       	ldi	r22, 0x00	; 0
+   1e5d6:	70 e0       	ldi	r23, 0x00	; 0
+   1e5d8:	cb 01       	movw	r24, r22
+   1e5da:	7a de       	rcall	.-780    	; 0x1e2d0 <write_program_pages_fota>
+			LCD_Clear();
+   1e5dc:	eb dd       	rcall	.-1066   	; 0x1e1b4 <LCD_Clear>
+   1e5de:	4f ef       	ldi	r20, 0xFF	; 255
+   1e5e0:	80 e7       	ldi	r24, 0x70	; 112
+   1e5e2:	92 e0       	ldi	r25, 0x02	; 2
+   1e5e4:	41 50       	subi	r20, 0x01	; 1
+   1e5e6:	80 40       	sbci	r24, 0x00	; 0
+   1e5e8:	90 40       	sbci	r25, 0x00	; 0
+   1e5ea:	e1 f7       	brne	.-8      	; 0x1e5e4 <main+0x11c>
+   1e5ec:	00 c0       	rjmp	.+0      	; 0x1e5ee <main+0x126>
+   1e5ee:	00 00       	nop
+			_delay_ms(100);
+			LCD_String("Firmware Updated");
+   1e5f0:	87 ef       	ldi	r24, 0xF7	; 247
+   1e5f2:	94 e0       	ldi	r25, 0x04	; 4
+   1e5f4:	c8 dd       	rcall	.-1136   	; 0x1e186 <LCD_String>
+   1e5f6:	4d eb       	ldi	r20, 0xBD	; 189
+			LCD_String_xy(1,2,"Successfully");
+   1e5f8:	54 e0       	ldi	r21, 0x04	; 4
+   1e5fa:	62 e0       	ldi	r22, 0x02	; 2
+   1e5fc:	81 e0       	ldi	r24, 0x01	; 1
+   1e5fe:	de dd       	rcall	.-1092   	; 0x1e1bc <LCD_String_xy>
+   1e600:	2f ef       	ldi	r18, 0xFF	; 255
+   1e602:	33 ed       	ldi	r19, 0xD3	; 211
+   1e604:	40 e3       	ldi	r20, 0x30	; 48
+   1e606:	21 50       	subi	r18, 0x01	; 1
+   1e608:	30 40       	sbci	r19, 0x00	; 0
+   1e60a:	40 40       	sbci	r20, 0x00	; 0
+   1e60c:	e1 f7       	brne	.-8      	; 0x1e606 <main+0x13e>
+   1e60e:	00 c0       	rjmp	.+0      	; 0x1e610 <main+0x148>
+   1e610:	00 00       	nop
+   1e612:	d0 dd       	rcall	.-1120   	; 0x1e1b4 <LCD_Clear>
+   1e614:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+			_delay_ms(2000);
+			LCD_Clear();
+   1e618:	8f ef       	ldi	r24, 0xFF	; 255
+			asm("jmp 0");
+   1e61a:	99 e6       	ldi	r25, 0x69	; 105
+   1e61c:	28 e1       	ldi	r18, 0x18	; 24
+   1e61e:	81 50       	subi	r24, 0x01	; 1
+   1e620:	90 40       	sbci	r25, 0x00	; 0
+   1e622:	20 40       	sbci	r18, 0x00	; 0
+   1e624:	e1 f7       	brne	.-8      	; 0x1e61e <main+0x156>
+   1e626:	00 c0       	rjmp	.+0      	; 0x1e628 <main+0x160>
+   1e628:	00 00       	nop
+   1e62a:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+   1e62e:	80 e0       	ldi	r24, 0x00	; 0
+		}
+		_delay_ms(1000);
+		asm("jmp 0");
+   1e630:	90 e0       	ldi	r25, 0x00	; 0
+   1e632:	08 95       	ret
+
+0001e634 <USART_Init>:
+		
+	
+}
+   1e634:	90 93 90 00 	sts	0x0090, r25	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+   1e638:	89 b9       	out	0x09, r24	; 9
+	while (str[j]!=0)		/* Send string till null */
+	{
+		USART_Transmit(str[j]);	
+		j++;
+	}
+}
+   1e63a:	38 e1       	ldi	r19, 0x18	; 24
+   1e63c:	3a b9       	out	0x0a, r19	; 10
+   1e63e:	26 e0       	ldi	r18, 0x06	; 6
+   1e640:	20 93 95 00 	sts	0x0095, r18	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+   1e644:	90 93 98 00 	sts	0x0098, r25	; 0x800098 <__TEXT_REGION_LENGTH__+0x7e0098>
+   1e648:	80 93 99 00 	sts	0x0099, r24	; 0x800099 <__TEXT_REGION_LENGTH__+0x7e0099>
+   1e64c:	30 93 9a 00 	sts	0x009A, r19	; 0x80009a <__TEXT_REGION_LENGTH__+0x7e009a>
+   1e650:	20 93 9d 00 	sts	0x009D, r18	; 0x80009d <__TEXT_REGION_LENGTH__+0x7e009d>
+   1e654:	08 95       	ret
+
+0001e656 <USART_Transmit>:
+   1e656:	5d 9b       	sbis	0x0b, 5	; 11
+   1e658:	fe cf       	rjmp	.-4      	; 0x1e656 <USART_Transmit>
+   1e65a:	8c b9       	out	0x0c, r24	; 12
+   1e65c:	08 95       	ret
+
+0001e65e <USART_Transmit1>:
+   1e65e:	90 91 9b 00 	lds	r25, 0x009B	; 0x80009b <__TEXT_REGION_LENGTH__+0x7e009b>
+   1e662:	95 ff       	sbrs	r25, 5
+   1e664:	fc cf       	rjmp	.-8      	; 0x1e65e <USART_Transmit1>
+   1e666:	80 93 9c 00 	sts	0x009C, r24	; 0x80009c <__TEXT_REGION_LENGTH__+0x7e009c>
+   1e66a:	08 95       	ret
+
+0001e66c <USART_Receive>:
+   1e66c:	5f 9b       	sbis	0x0b, 7	; 11
+   1e66e:	fe cf       	rjmp	.-4      	; 0x1e66c <USART_Receive>
+   1e670:	8c b1       	in	r24, 0x0c	; 12
+   1e672:	08 95       	ret
+
+0001e674 <UART_SendString1>:
+
+void UART_SendString1(char *str)
+{
+   1e674:	0f 93       	push	r16
+   1e676:	1f 93       	push	r17
+   1e678:	cf 93       	push	r28
+   1e67a:	8c 01       	movw	r16, r24
+	unsigned char j=0;
+   1e67c:	c0 e0       	ldi	r28, 0x00	; 0
+	
+	while (str[j]!=0)		/* Send string till null */
+   1e67e:	f8 01       	movw	r30, r16
+   1e680:	ec 0f       	add	r30, r28
+   1e682:	f1 1d       	adc	r31, r1
+   1e684:	80 81       	ld	r24, Z
+   1e686:	88 23       	and	r24, r24
+   1e688:	19 f0       	breq	.+6      	; 0x1e690 <UART_SendString1+0x1c>
+	{
+		USART_Transmit1(str[j]);
+   1e68a:	e9 df       	rcall	.-46     	; 0x1e65e <USART_Transmit1>
+		j++;
+   1e68c:	cf 5f       	subi	r28, 0xFF	; 255
+   1e68e:	f7 cf       	rjmp	.-18     	; 0x1e67e <UART_SendString1+0xa>
+	}
+   1e690:	cf 91       	pop	r28
+   1e692:	1f 91       	pop	r17
+   1e694:	0f 91       	pop	r16
+   1e696:	08 95       	ret
+
+0001e698 <eeprom_read_byte>:
+   1e698:	e1 99       	sbic	0x1c, 1	; 28
+   1e69a:	fe cf       	rjmp	.-4      	; 0x1e698 <eeprom_read_byte>
+   1e69c:	9f bb       	out	0x1f, r25	; 31
+   1e69e:	8e bb       	out	0x1e, r24	; 30
+   1e6a0:	e0 9a       	sbi	0x1c, 0	; 28
+   1e6a2:	99 27       	eor	r25, r25
+   1e6a4:	8d b3       	in	r24, 0x1d	; 29
+   1e6a6:	08 95       	ret
+
+0001e6a8 <eeprom_read_word>:
+   1e6a8:	a8 e1       	ldi	r26, 0x18	; 24
+   1e6aa:	b0 e0       	ldi	r27, 0x00	; 0
+   1e6ac:	42 e0       	ldi	r20, 0x02	; 2
+   1e6ae:	50 e0       	ldi	r21, 0x00	; 0
+   1e6b0:	13 c0       	rjmp	.+38     	; 0x1e6d8 <eeprom_read_blraw>
+
+0001e6b2 <eeprom_update_byte>:
+   1e6b2:	26 2f       	mov	r18, r22
+
+0001e6b4 <eeprom_update_r18>:
+   1e6b4:	e1 99       	sbic	0x1c, 1	; 28
+   1e6b6:	fe cf       	rjmp	.-4      	; 0x1e6b4 <eeprom_update_r18>
+   1e6b8:	9f bb       	out	0x1f, r25	; 31
+   1e6ba:	8e bb       	out	0x1e, r24	; 30
+   1e6bc:	e0 9a       	sbi	0x1c, 0	; 28
+   1e6be:	01 97       	sbiw	r24, 0x01	; 1
+   1e6c0:	0d b2       	in	r0, 0x1d	; 29
+   1e6c2:	02 16       	cp	r0, r18
+   1e6c4:	31 f0       	breq	.+12     	; 0x1e6d2 <eeprom_update_r18+0x1e>
+   1e6c6:	2d bb       	out	0x1d, r18	; 29
+   1e6c8:	0f b6       	in	r0, 0x3f	; 63
+   1e6ca:	f8 94       	cli
+   1e6cc:	e2 9a       	sbi	0x1c, 2	; 28
+   1e6ce:	e1 9a       	sbi	0x1c, 1	; 28
+   1e6d0:	0f be       	out	0x3f, r0	; 63
+   1e6d2:	08 95       	ret
+
+0001e6d4 <eeprom_read_block>:
+   1e6d4:	dc 01       	movw	r26, r24
+   1e6d6:	cb 01       	movw	r24, r22
+
+0001e6d8 <eeprom_read_blraw>:
+   1e6d8:	fc 01       	movw	r30, r24
+   1e6da:	e1 99       	sbic	0x1c, 1	; 28
+   1e6dc:	fe cf       	rjmp	.-4      	; 0x1e6da <eeprom_read_blraw+0x2>
+   1e6de:	06 c0       	rjmp	.+12     	; 0x1e6ec <eeprom_read_blraw+0x14>
+   1e6e0:	ff bb       	out	0x1f, r31	; 31
+   1e6e2:	ee bb       	out	0x1e, r30	; 30
+   1e6e4:	e0 9a       	sbi	0x1c, 0	; 28
+   1e6e6:	31 96       	adiw	r30, 0x01	; 1
+   1e6e8:	0d b2       	in	r0, 0x1d	; 29
+   1e6ea:	0d 92       	st	X+, r0
+   1e6ec:	41 50       	subi	r20, 0x01	; 1
+   1e6ee:	50 40       	sbci	r21, 0x00	; 0
+   1e6f0:	b8 f7       	brcc	.-18     	; 0x1e6e0 <eeprom_read_blraw+0x8>
+   1e6f2:	08 95       	ret
+
+0001e6f4 <_exit>:
+   1e6f4:	f8 94       	cli
+
+0001e6f6 <__stop_program>:
+   1e6f6:	ff cf       	rjmp	.-2      	; 0x1e6f6 <__stop_program>
