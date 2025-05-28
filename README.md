@@ -49,6 +49,8 @@ A custom Android FOTA app is used to:
 
 ![Bluetooth-Based FOTA System](images/diagram.png)
 
-
+## Demo Video
+▶ Watch OTA in Action
+  https://drive.google.com/file/d/17GTPagh-MRnu9xNd5_EWC_hXYwEgB1cv/view?usp=sharing
 
 
