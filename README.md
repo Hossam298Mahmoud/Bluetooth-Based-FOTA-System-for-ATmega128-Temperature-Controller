@@ -29,7 +29,7 @@ A custom Android FOTA app is used to:
 3. Send the binary over Bluetooth to the ATmega128 using uart.
 4. The MCU writes the firmware into flash using a custom bootloader.
 
-![Bluetooth-Based FOTA System](images/diagram.PNG)
+![Bluetooth-Based FOTA System](images/diagram.png)
 
 
 
